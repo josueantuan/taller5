@@ -67,7 +67,7 @@ public class AccountController {
 		mailSender.sendMail("josueantuan1996@gmail.com", newUser.getUsername(), "AntawaGo - Registro exitoso!",
 				"Estimado " + newUser.getNames() + " " + newUser.getLastNames() + ",  su registro es exitoso '"
 						);
-		
+		System.out.println("Coreo Enviado...............................");
 		
 		return new ResponseEntity<User>(userService.save(newUser), HttpStatus.CREATED);
 		
