@@ -10,8 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "catalog")
-public class Catalogo implements Serializable{
+@Table(name = "catalogGF")
+public class CatalogGenderAndFrom implements Serializable {
+	
 	/**
 	 * 
 	 */
@@ -36,8 +37,11 @@ public class Catalogo implements Serializable{
 	@Column(nullable = false,length = 70)
 	private String name;
 	
+	public CatalogGenderAndFrom(){
+    	
+    }
     
-    public Catalogo(Long id_father,String name){
+    public CatalogGenderAndFrom(Long id_father,String name){
     	this.id_father 	= id_father;
     	this.name	= name;
     }
@@ -65,4 +69,5 @@ public class Catalogo implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
+
 }
