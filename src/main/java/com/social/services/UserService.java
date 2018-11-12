@@ -2,7 +2,6 @@ package com.social.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.social.dao.UserRepository;
 import com.social.entities.User;
 /** 
@@ -30,4 +29,13 @@ public class UserService {
 	public User find(Long id) {
 		return userRepository.findOne(id);
 	}
+	
+	public Long countByCellphone(String cellphone) {
+		return userRepository.countByCellphone(cellphone);
+	}
+	public Long countByCedula(String cedula) {
+		return userRepository.countByCedula(cedula);
+	}
+
+	
 }

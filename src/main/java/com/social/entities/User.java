@@ -83,7 +83,7 @@ public class User implements UserDetails {
 	/**
 	 * Description of the property cellphone.
 	 */
-	@Column(length = 20, nullable = false)
+	@Column(length = 10, nullable = false)
 
 	private String cellphone;
 
@@ -125,11 +125,11 @@ public class User implements UserDetails {
 	 * @param username
 	 * @param password
 	 */
-	public User(final String username, final String password) {
+	public User(final String username, final String password, final String cellphone) {
 		super();
 		this.username = username;
 		this.password = password;
-
+		
 	}
 
 	public User() {
@@ -221,7 +221,7 @@ public class User implements UserDetails {
 	}
 
 	/**
-	 * @param names the names to set
+	 * @param  the names to set
 	 */
 	public void setNames(String names) {
 		this.names = names;
@@ -336,6 +336,7 @@ public class User implements UserDetails {
 	public void setNacionalidad(Integer nacionalidad) {
 		this.nacionalidad = nacionalidad;
 	}
+	
 	
 
 }
