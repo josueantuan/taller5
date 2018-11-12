@@ -64,9 +64,10 @@ public class AccountController {
 		
 		newUser.setRole("USER");
 	
-		/*mailSender.sendMail("antawa@info.com", newUser.getUsername(), "AntawaGo - Documento no válido",
-				"Estimado " + newUser.getNames() + " " + newUser.getLastNames() + ",  El documento '"
-						);*/
+		mailSender.sendMail("josueantuan1996@gmail.com", newUser.getUsername(), "AntawaGo - Registro exitoso!",
+				"Estimado " + newUser.getNames() + " " + newUser.getLastNames() + ",  su registro es exitoso '"
+						);
+		
 		
 		return new ResponseEntity<User>(userService.save(newUser), HttpStatus.CREATED);
 		
